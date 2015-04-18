@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>CS320Final</display-name>
+  <servlet>
+    <servlet-name>OnStartUp</servlet-name>
+    <servlet-class>config.LoadCoursesServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>AddJOb</servlet-name>
+    <servlet-class>controller.DoAddJobServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddJOb</servlet-name>
+    <url-pattern>/doAddJobs</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AddApplicant</servlet-name>
+    <servlet-class>controller.DoAddApplicantServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddApplicant</servlet-name>
+    <url-pattern>/doAddApplicant</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DoSort</servlet-name>
+    <servlet-class>controller.DoSortServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DoSort</servlet-name>
+    <url-pattern>/doSort</url-pattern>
+  </servlet-mapping>
+   <context-param>
+    <param-name>UniversityName</param-name>
+    <param-value>Cal State LA</param-value>
+  </context-param>
+  <context-param>
+    <param-name>DepartmentName</param-name>
+    <param-value>Department of Computer Science</param-value>
+  </context-param>
+  <welcome-file-list>
+    <welcome-file>views/index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
